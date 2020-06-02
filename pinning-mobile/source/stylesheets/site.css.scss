@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+  background-color: grey;
+}
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+
+#page { //.content           //shared HEAD
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  border: 10px solid blue;
+  box-sizing: border-box;
+}
+
+#page {
+  position: relative; //JS?
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  .scrollContent {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: 10px solid cornflowerblue;
+    box-sizing: border-box;
+    .pinContainer {
+      height: 80rem; //animation height
+      position: relative;
+      background-color: silver;
+      //pointer-events: none;
+    }
+    .pin {
+      width: calc(10rem + 5vw);
+      height: calc(10rem + 5vw);
+      background-color: red;
+    }
+  }
+}
+
+.scrollmagic-pin-spacer {
+  //damit gepinnte Elemente nicht springen
+  margin: 0 auto !important;
+}
